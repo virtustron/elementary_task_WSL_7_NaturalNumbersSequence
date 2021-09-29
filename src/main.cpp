@@ -4,8 +4,7 @@
 int main(int argc, char *argv[])
 {
 	NaturalSequenceConsoleUI console_ui;
-	console_ui.RequestData(argc, argv);
-    //console_ui.ShowInstructions();
-
+	console_ui.MakeDialog(argc, argv);
+    
 	return 0;
 }
