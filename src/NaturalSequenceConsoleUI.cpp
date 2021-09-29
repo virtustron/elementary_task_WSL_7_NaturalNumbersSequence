@@ -15,7 +15,6 @@ void NaturalSequenceConsoleUI::MakeDialog(int argc, char* argv[])
     {
         WriteSequence();
     }
-
 }
 
 
@@ -28,11 +27,12 @@ void NaturalSequenceConsoleUI::WriteSequence()
 {
     unsigned int current_number = m_iterator.Current();
     
-    while (current_number < m_upper_bound)
+    while (current_number*current_number < m_upper_bound)
     {
-        std::cout << current_number << "\n";
+        std::cout << current_number << ", ";
         m_iterator.Next();
+        current_number = m_iterator.Current();
     }
-    
 
+    std::cout << "\n"; 
 }
