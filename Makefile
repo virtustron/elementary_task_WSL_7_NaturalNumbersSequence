@@ -4,7 +4,7 @@ bin = ./bin/
 all: main
 		
 main: build_all
-	g++ -o $(bin)main $(bin)main.o $(bin)NaturalSequenceConsoleUI.o 
+	g++ -o $(bin)main $(bin)main.o $(bin)NaturalSequenceConsoleUI.o $(bin)NaturalSequenceIterator.o 
 
 build_all:
 	g++ -o $(bin)NaturalSequenceIterator.o -c $(src)NaturalSequenceIterator.cpp

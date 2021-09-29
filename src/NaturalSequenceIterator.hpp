@@ -1,13 +1,14 @@
 #pragma once
 
-class NaturalSequenceIterator
+#include "INumbersSequenceIterator.hpp"
+
+class NaturalSequenceIterator : public INumbersSequenceIterator
 {
 public:
-    NaturalSequenceIterator();
-    void Next(); 
-    bool IsDone();
-    unsigned int Current();
- 
+    NaturalSequenceIterator() ;
+    void Next() override; 
+    bool IsDone() override;
+    unsigned int Current() override;
 private:
-    unsigned int m_iterator;
+    unsigned int m_iterator = 0;
 };
