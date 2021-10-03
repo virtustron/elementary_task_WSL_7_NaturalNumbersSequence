@@ -9,7 +9,7 @@ public:
     // class Iterator originally from
     //   https://en.cppreference.com/w/cpp/iterator/iterator
     class Iterator: public std::iterator<
-                        std::input_iterator_tag,   // iterator_category
+                        std::input_iterator_tag,           // iterator_category
                         unsigned int,                      // value_type
                         unsigned int,                      // difference_type
                         const unsigned int*,               // pointer
