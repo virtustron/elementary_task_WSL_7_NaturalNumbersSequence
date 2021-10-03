@@ -1,8 +1,8 @@
 #pragma once
 
 #include <iterator> // For std::input_iterator_tag
+#include <limits.h>
 
-template<unsigned int TO> 
 class NaturalSequence
 {
 public:
@@ -26,5 +26,5 @@ public:
         reference operator*() const {return m_num;}
     };
     Iterator begin() {return Iterator(0);}
-    Iterator end() {return Iterator(TO-1);}
+    Iterator end() {return Iterator(UINT_MAX);}
 };

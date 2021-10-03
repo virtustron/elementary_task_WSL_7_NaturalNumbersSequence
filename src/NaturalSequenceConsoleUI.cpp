@@ -28,9 +28,14 @@ void NaturalSequenceConsoleUI::ShowInstructions()
 
 void NaturalSequenceConsoleUI::WriteSequence()
 {
-    for (unsigned int i : NaturalSequence<10>()) 
+    for (unsigned int i : NaturalSequence()) 
     {
         std::cout << i << ' '; 
+
+        if (i == m_upper_bound)
+        {
+            break;
+        }
     }
 
     std::cout << '\n';       
