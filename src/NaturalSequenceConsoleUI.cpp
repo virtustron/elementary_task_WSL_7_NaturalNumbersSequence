@@ -1,5 +1,8 @@
 #include "NaturalSequenceConsoleUI.hpp"
 
+#include <iterator>
+#include "NaturalSequence.hpp"
+
 
 void NaturalSequenceConsoleUI::MakeDialog(int argc, char* argv[])
 {
@@ -25,6 +28,20 @@ void NaturalSequenceConsoleUI::ShowInstructions()
 
 void NaturalSequenceConsoleUI::WriteSequence()
 {
+    // std::find requires an input iterator
+    //auto range = NaturalSequence<m_upper_bound>();
+    //auto itr = std::find(range.begin(), range.end(), 18);
+    //std::cout << *itr << '\n'; // 18
+ 
+    // Range::iterator also satisfies range-based for requirements
+    for (unsigned int i : NaturalSequence<10>()) 
+    {
+        std::cout << i << ' '; 
+    }
+
+    std::cout << '\n';
+        
+    /*
     unsigned int current_number = m_iterator.Current();
     
     while (current_number*current_number < m_upper_bound)
@@ -35,4 +52,6 @@ void NaturalSequenceConsoleUI::WriteSequence()
     }
 
     std::cout << "\n"; 
+
+    */
 }

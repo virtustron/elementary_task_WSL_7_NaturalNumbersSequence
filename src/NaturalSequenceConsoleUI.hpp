@@ -15,6 +15,4 @@ public:
 private:
 	unsigned int m_upper_bound;
     NaturalSequenceIterator m_iterator;
-
-
 };
