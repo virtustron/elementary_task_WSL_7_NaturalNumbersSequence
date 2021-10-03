@@ -1,5 +1,7 @@
 #pragma once
 
+// TODO: see STL iterator
+
 class INumbersSequenceIterator
 {
 public:

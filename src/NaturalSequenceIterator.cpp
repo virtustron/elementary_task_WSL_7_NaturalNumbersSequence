@@ -8,7 +8,8 @@ NaturalSequenceIterator::NaturalSequenceIterator()
 
 void NaturalSequenceIterator::Next()
 {
-    m_iterator++;
+    // prefix more efficient
+    ++m_iterator;
 }
 
 bool NaturalSequenceIterator::IsDone() 

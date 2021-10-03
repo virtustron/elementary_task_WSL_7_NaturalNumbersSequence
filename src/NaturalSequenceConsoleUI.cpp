@@ -9,7 +9,7 @@ void NaturalSequenceConsoleUI::MakeDialog(int argc, char* argv[])
     m_upper_bound = 10;
 
 
-    // TODO: validate "m_upper_bound" 
+    // TODO: validate "m_upper_bound" in separate class _Application_ {create validators, parsers, UI}
     // temporary validation:
     if (m_upper_bound > 0 || m_upper_bound < 1000)
     {
