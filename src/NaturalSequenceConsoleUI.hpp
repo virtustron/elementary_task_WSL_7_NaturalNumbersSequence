@@ -1,7 +1,6 @@
 #pragma once
 
 #include <iostream>
-#include "NaturalSequenceIterator.hpp"
 
 using namespace std;
 
@@ -14,5 +13,4 @@ public:
 
 private:
 	unsigned int m_upper_bound;
-    NaturalSequenceIterator m_iterator;
 };
