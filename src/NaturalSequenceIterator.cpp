@@ -14,12 +14,12 @@ NaturalSequenceIterator NaturalSequenceIterator::operator++(int)
     return retval;
 }
 
-bool NaturalSequenceIterator::operator==(NaturalSequenceIterator other) const 
+bool NaturalSequenceIterator::operator==(const NaturalSequenceIterator& other) const 
 {
     return m_num == other.m_num;
 }
 
-bool NaturalSequenceIterator::operator!=(NaturalSequenceIterator other) const 
+bool NaturalSequenceIterator::operator!=(const NaturalSequenceIterator& other) const 
 {
     return !(*this == other);
 }

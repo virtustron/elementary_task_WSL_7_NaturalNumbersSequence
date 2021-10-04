@@ -14,15 +14,18 @@ class NaturalSequenceIterator: public std::iterator<
                         unsigned int                       // reference
                         >
 {
-        unsigned int m_num = 0;
+       
 public:
         explicit NaturalSequenceIterator(unsigned int num = 0) : m_num(num) {}
         
         NaturalSequenceIterator& operator++();
         NaturalSequenceIterator operator++(int);
 
-        bool operator==(NaturalSequenceIterator other) const;
-        bool operator!=(NaturalSequenceIterator other) const;
+        bool operator==(const NaturalSequenceIterator& other) const;
+        bool operator!=(const NaturalSequenceIterator& other) const;
         
         reference operator*() const;
+
+private:
+        unsigned int m_num = 0;
 };
