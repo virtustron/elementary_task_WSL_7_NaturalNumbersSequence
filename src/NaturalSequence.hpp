@@ -15,4 +15,6 @@ public:
 private:
     unsigned int m_lower_bound;
     unsigned int m_upper_bound;
+
+    bool IsNaturalBoundValid(unsigned int bound);
 };
