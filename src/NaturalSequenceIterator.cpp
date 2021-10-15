@@ -9,6 +9,7 @@ NaturalSequenceIterator& NaturalSequenceIterator::operator++()
 NaturalSequenceIterator NaturalSequenceIterator::operator++(int) 
 {
     NaturalSequenceIterator retval = *this; 
+    
     ++(*this); 
     
     return retval;

@@ -1,8 +1,8 @@
 #pragma once
 
 #include <iostream>
-
-using namespace std;
+#include <iterator>
+#include "NaturalSequence.hpp"
 
 class NaturalSequenceConsoleUI
 {
@@ -13,4 +13,4 @@ public:
 
 private:
 	unsigned int m_upper_bound;
-};
+}; 

@@ -1,9 +1,5 @@
 #include "NaturalSequenceConsoleUI.hpp"
 
-#include <iterator>
-#include "NaturalSequence.hpp"
-
-
 void NaturalSequenceConsoleUI::MakeDialog(int argc, char* argv[])
 {
     // TODO: request data from user
@@ -32,7 +28,7 @@ void NaturalSequenceConsoleUI::WriteSequence()
     {
         std::cout << i << ' '; 
 
-        if (i == m_upper_bound)
+        if (i >= m_upper_bound)
         {
             break;
         }
