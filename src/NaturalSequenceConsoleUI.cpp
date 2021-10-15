@@ -4,7 +4,7 @@ void NaturalSequenceConsoleUI::MakeDialog(int argc, char* argv[])
 {
     unsigned int upper_bound;
     
-    if (COMPLETE_SEQUENCE_PARAMETERS_COUNT == argc)
+    if (COMPLETE_NATURAL_SEQUENCE_PARAMETERS_COUNT == argc)
 	{
         upper_bound = atoi(argv[1]);
 	    if (upper_bound == ATOI_NO_CONVERSION_CAN_BE_PERFORMED)
