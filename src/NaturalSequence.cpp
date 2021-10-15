@@ -15,6 +15,7 @@ NaturalSequenceIterator NaturalSequence::begin()
 
 NaturalSequenceIterator NaturalSequence::end() 
 {
-    return NaturalSequenceIterator(m_upper_bound);
+    // !square! of the number must be smaller - so "sqrt" is called
+    return NaturalSequenceIterator(round(sqrt(m_upper_bound)));
 }
 

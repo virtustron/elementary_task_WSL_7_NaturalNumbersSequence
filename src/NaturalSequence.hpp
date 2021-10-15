@@ -1,6 +1,7 @@
 #pragma once
 
 #include <limits.h>
+#include <math.h>
 #include "NaturalSequenceIterator.hpp"
 
 class NaturalSequence
