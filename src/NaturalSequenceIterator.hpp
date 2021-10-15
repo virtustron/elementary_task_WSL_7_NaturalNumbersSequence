@@ -23,6 +23,9 @@ public:
 
         bool operator==(const NaturalSequenceIterator& other) const;
         bool operator!=(const NaturalSequenceIterator& other) const;
+
+        bool operator>(const NaturalSequenceIterator& other) const;
+        bool operator<(const NaturalSequenceIterator& other) const;
         
         reference operator*() const;
 

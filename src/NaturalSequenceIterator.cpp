@@ -29,3 +29,13 @@ NaturalSequenceIterator::reference NaturalSequenceIterator::operator*() const
 {
     return m_num;
 }
+
+bool NaturalSequenceIterator::operator>(const NaturalSequenceIterator& other) const
+{
+    return m_num > other.m_num;
+}
+
+bool NaturalSequenceIterator::operator<(const NaturalSequenceIterator& other) const
+{
+    return m_num < other.m_num;
+}

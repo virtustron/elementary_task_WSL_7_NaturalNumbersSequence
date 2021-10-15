@@ -24,14 +24,12 @@ void NaturalSequenceConsoleUI::ShowInstructions()
 
 void NaturalSequenceConsoleUI::WriteSequence()
 {
-    for (unsigned int i : NaturalSequence()) 
+    auto natural_sequence = NaturalSequence(0, 100);
+    
+    for (auto it = natural_sequence.begin(), end = natural_sequence.end(); it < end; ++it)
     {
-        std::cout << i << ' '; 
-
-        if (i >= m_upper_bound)
-        {
-            break;
-        }
+        const auto i = *it;
+        std::cout << i << ' ';
     }
 
     std::cout << '\n';       
