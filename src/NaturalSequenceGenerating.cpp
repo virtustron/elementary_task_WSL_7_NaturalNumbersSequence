@@ -1,6 +1,8 @@
 #include "NaturalSequenceGenerating.hpp"
 
 #include <stdexcept>
+#include <vector>
+#include "NaturalSequence.hpp"
 #include "NaturalSequenceParametersContainer.hpp"
 #include "NaturalSequenceGeneratedContainer.hpp"
 
@@ -27,27 +29,40 @@ int InitializeNaturalSequenceParameters(void** parameters_container_to_initializ
     return INIT_SUCCEDED;
 }
 
+
 int GenerateNaturalSequence(void* parameters_container, void **generated_sequence_container)
 {
     if (parameters_container == NULL)
     {
-        return GENERATING_PARAMETERS_IS_NOT_VALID;
+        return GENERATING_PARAMETERS_ARE_NOT_VALID;
     }
     
     try
     {
         NaturalSequenceParametersContainer* sequence_parameters_container = (NaturalSequenceParametersContainer*)parameters_container;
 
-        
+        auto natural_sequence = NaturalSequence(0, sequence_parameters_container->get_upper_bound());
+        std::vector<unsigned int> sequence;
+    
+        for (auto it = natural_sequence.begin(), end = natural_sequence.end(); it < end; ++it)
+        {
+            const auto i = *it;
+            sequence.push_back(i);
+        }
 
-        *can_contain = EnvelopeComparator::CanOneContainAnother(envelope_1, envelope_2);
+        NaturalSequenceGeneratedContainer* sequence_container;
+
+        
+        unsigned int *elements = sequence.data();
+        const int elements_count = sequence.size();
+        sequence_container = new NaturalSequenceGeneratedContainer(elements, elements_count);
+
+        *generated_sequence_container = (void*)sequence_container; 
     }
     catch(const std::exception& e)
     {
         return GENERATING_FAILED;
     }
-    
-    
     
     return GENERATING_SUCCEDED;
 }

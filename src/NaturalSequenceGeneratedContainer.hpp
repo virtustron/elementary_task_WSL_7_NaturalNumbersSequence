@@ -15,4 +15,4 @@ private:
     int m_elements_count;
     unsigned int *m_elements;
 
-}
+};

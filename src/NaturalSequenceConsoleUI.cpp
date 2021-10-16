@@ -48,6 +48,7 @@ void NaturalSequenceConsoleUI::WriteSequence(const unsigned int upper_bound)
     
 }
 
+
 void NaturalSequenceConsoleUI::ShowProgramInstructions()
 {
 	std::cout << "\n";
