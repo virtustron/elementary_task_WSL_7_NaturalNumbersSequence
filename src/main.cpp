@@ -29,10 +29,7 @@ int main(int argc, char *argv[])
 			int elements_count = sequence_container->get_elements_count();
 			unsigned int* elements_array = sequence_container->get_elements();	
 
-			//std::vector <unsigned int> sequence(elements_array, elements_array + elements_count);
-			std::vector <unsigned int> sequence;
-			sequence.resize(elements_count);
-			
+			std::vector <unsigned int> sequence(elements_array, elements_array + elements_count);
 
 			for (int i = 0; i < sequence.size(); i++)
 			{
