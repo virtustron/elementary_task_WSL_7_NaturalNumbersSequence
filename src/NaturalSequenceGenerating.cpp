@@ -42,19 +42,19 @@ int GenerateNaturalSequence(void* parameters_container, void **generated_sequenc
         NaturalSequenceParametersContainer* sequence_parameters_container = (NaturalSequenceParametersContainer*)parameters_container;
 
         auto natural_sequence = NaturalSequence(0, sequence_parameters_container->get_upper_bound());
-        std::vector<unsigned int> sequence;
+        std::vector<unsigned int> *sequence = new std::vector<unsigned int>();
     
         for (auto it = natural_sequence.begin(), end = natural_sequence.end(); it < end; ++it)
         {
             const auto i = *it;
-            sequence.push_back(i);
+            sequence->push_back(i);
         }
 
         NaturalSequenceGeneratedContainer* sequence_container;
 
         
-        unsigned int *elements = sequence.data();
-        const int elements_count = sequence.size();
+        unsigned int *elements = sequence->data();
+        const int elements_count = sequence->size();
         sequence_container = new NaturalSequenceGeneratedContainer(elements, elements_count);
 
         *generated_sequence_container = (void*)sequence_container; 

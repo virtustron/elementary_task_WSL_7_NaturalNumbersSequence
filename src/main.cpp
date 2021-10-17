@@ -38,6 +38,17 @@ int main(int argc, char *argv[])
 
 			std::cout << "\n";
 
+
+			if (sequence_container != NULL)
+			{
+				delete sequence_container;
+			}
+
+			if (elements_array != NULL)
+			{
+				delete elements_array;
+			}
+			
 			break;
 		}
 
@@ -59,6 +70,18 @@ int main(int argc, char *argv[])
 			break;
 		}
 		}
+
+
+		if (parameters_container != NULL)
+		{
+			delete parameters_container;
+		}
+
+		if (generated_sequence_container != NULL)
+		{
+			delete generated_sequence_container;
+		}	
+		
 	}
 	
 	/*
